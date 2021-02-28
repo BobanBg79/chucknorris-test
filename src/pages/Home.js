@@ -29,18 +29,21 @@ const Home = ({ switchTheme }) => {
   // event callbacks
   const onSearchInputTextChange = ({ target }) =>
     setSearchInputValue(target.value);
+
   const closeSuggestionsDropdown = () => setShowSuggestionBox(false);
 
   const selectSearchTermFromHistory = (searchTerm) => () =>
     setSearchInputValue(searchTerm);
 
   const getFacts = (query) => () => {
-    dispatch(factOperations.getFactsByQuery(query));
-    setShowSuggestionBox(true);
+    if (query) {
+      dispatch(factOperations.getFactsByQuery(query));
+      setShowSuggestionBox(true);
+    }
   };
 
   useEffect(() => {
-    // when user stops typing for more then 500ms, api get request is sent
+    // when user stops typing for more then 1sec, api get request is sent
     getChuckNorrisFactRef.current = debounce((value) => {
       getFacts(value)();
     }, 1000);

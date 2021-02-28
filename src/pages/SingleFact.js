@@ -16,7 +16,6 @@ const SingleFact = ({ match, switchTheme }) => {
     facts && facts.data && facts.data.find((result) => result.id === factId);
 
   if (!singleFact) history.push("/home");
-  const { value, icon_url } = singleFact;
   return (
     <div
       className="page single-fact-page"
@@ -33,16 +32,18 @@ const SingleFact = ({ match, switchTheme }) => {
         <Row className="justify-content-md-center no-gutters">
           <Col md={6} className="align-items-center p-2 position-relative">
             <PageMainContent>
-              <div className="single-fact-container">
-                <div className="image-container">
-                  <img
-                    src={icon_url}
-                    className="img-thumbnail"
-                    alt="suggestion-icon"
-                  />
+              {singleFact && (
+                <div className="single-fact-container">
+                  <div className="image-container">
+                    <img
+                      src={singleFact.icon_url}
+                      className="img-thumbnail"
+                      alt="suggestion-icon"
+                    />
+                  </div>
+                  {singleFact.value}
                 </div>
-                {value}
-              </div>
+              )}
             </PageMainContent>
           </Col>
         </Row>

@@ -2,3 +2,6 @@ export const FACTS_FETCH = "FACTS_FETCH";
 export const FACTS_FETCH_ERROR = "FACTS_FETCH_ERROR";
 export const SET_FACTS = "SET_FACTS";
 export const RESET_FACTS = "RESET_FACTS";
+
+export const RANDOM_FACT_FETCH = "RANDOM_FACT_FETCH";
+export const SET_RANDOM_FACT = "SET_RANDOM_FACT";

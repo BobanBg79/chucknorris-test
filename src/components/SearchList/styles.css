@@ -1,0 +1,14 @@
+.search-terms-history-container ul {
+  display: inline-block;
+}
+
+.search-terms-history-container li:not(.disabled) {
+  cursor: pointer;
+}
+.search-terms-history-container li:not(.disabled):hover {
+  color: #1571cd;
+}
+
+.search-terms-history-container.custom-icon {
+  margin-right: 6px;
+}

@@ -1,0 +1,24 @@
+#auto-suggestion-container {
+  position: absolute;
+  z-index: 99;
+  width: calc(100% - 40px);
+  top: calc(100% + 2px);
+  background-color: white;
+  box-shadow: 0 0 8px #8b8a8a;
+  left: 40px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 6px 12px;
+}
+a.single-suggestion {
+  font-size: 12px;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#auto-suggestion-container .image-container {
+  width: 30px;
+  height: 30px;
+}

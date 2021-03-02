@@ -9,7 +9,10 @@ const PageHeader = ({ children, className, backButton, switchTheme }) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <header className={`page-header${className ? ` ${className}` : ""}`}>
+    <header
+      className={`page-header${className ? ` ${className}` : ""}
+        ${backButton ? ` with-back-button` : ""}`}
+    >
       {backButton && (
         <Button
           variant="primary"

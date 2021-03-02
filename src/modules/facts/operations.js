@@ -22,7 +22,6 @@ const getFactsByQuery = (query) => async (dispatch) => {
     const json = await response.json();
     dispatch(setFacts(json.result));
   } catch (error) {
-    console.log("Greska: ", error.message);
     dispatch(fetchFactsError(error.message));
   }
 };

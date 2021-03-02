@@ -17,6 +17,9 @@ a.single-suggestion {
   align-items: center;
   justify-content: flex-start;
 }
+.no-suggestions-message {
+  color: #000000;
+}
 
 #auto-suggestion-container .image-container {
   width: 30px;

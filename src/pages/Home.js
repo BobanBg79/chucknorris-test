@@ -47,6 +47,7 @@ const Home = ({ switchTheme }) => {
     getChuckNorrisFactRef.current = debounce((value) => {
       getFacts(value)();
     }, 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

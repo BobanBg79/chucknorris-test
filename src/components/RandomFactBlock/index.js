@@ -12,6 +12,7 @@ const RandomFactBlock = () => {
 
   useEffect(() => {
     dispatch(factOperations.getRandomFact());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

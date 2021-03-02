@@ -9,7 +9,8 @@ const AutoSuggestionBox = () => {
   const { data: factResults, fetch } = useSelector((state) => state.facts);
 
   const displaySuggestions = () => {
-    if (!factResults || !factResults.length) return <div>No results...</div>;
+    if (!factResults || !factResults.length)
+      return <div className="no-suggestions-message">No results...</div>;
     return factResults.slice(0, 6).map(({ id, icon_url, value }) => (
       <Link key={id} className="single-suggestion" to={`/single-fact/${id}`}>
         <div className="image-container">

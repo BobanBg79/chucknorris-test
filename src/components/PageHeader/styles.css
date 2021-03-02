@@ -3,18 +3,42 @@
   height: 44px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  padding: 0 120px 0 16px;
 }
 
 .page-header.with-back-button {
-  padding-left: 70px;
+  padding-left: 80px;
 }
+
+.page-header-main-content {
+  font-size: 13px;
+}
+
 .header-button {
   position: absolute;
+  font-size: 13px;
 }
 .back-button {
   left: 16px;
 }
 .switch-theme-btn {
   right: 16px;
+}
+
+@media screen and (min-width: 500px) {
+  .page-header {
+    justify-content: space-around;
+  }
+  .page-header-main-content {
+    font-size: 16px;
+  }
+  .header-button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .page-header {
+    padding: 0 120px;
+  }
 }
